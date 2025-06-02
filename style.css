@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f1ed;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(
+        90deg,
+        rgb(244, 228, 203) 0%,
+        rgb(244, 228, 203) 50%,
+        rgb(244, 228, 203) 100%
+    );
+    padding: 120px 0 70px 0;
+    position: relative;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f5ca9f;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.menu label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu label img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: #FF3C2A;
+}
+
+.icono-fijo {
+  width: 35px;  /* tamaño fijo que quieres */
+  height: 35px; /* para que no cambien */
+  object-fit: contain; /* para que mantengan proporción */
+}
+
+/* ========== CARRITO ========== */
+
+.submenu {
+    position: relative;
+}
+
+#carrito {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    backdrop-filter: blur(10px);
+    background-color: #4E4850D0;
+    padding: 20px;
+    min-width: 500px;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.submenu:hover #carrito {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.borrar {
+    background-color: #FF3C2A;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#carrito .contenido-carrito {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 5px;
+}
+
+#carrito .contenido-carrito::-webkit-scrollbar {
+  width: 8px;
+}
+
+#carrito .contenido-carrito::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* ========== CONTENIDO ========== */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header-txt {
+    flex: 1;
+    max-width: 500px;
+}
+
+.header-txt h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    color: #181818;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.header-txt p {
+    color: #484848;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.header-img img {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-txt {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .header-txt h1 {
+    font-size: 32px;
+  }
+
+  .header-txt p {
+    font-size: 16px;
+  }
+}
+
+/* ========== BOTONES ========== */
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    display: inline-block;
+    background-color: #FF3C2A;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover {
+    background-color: #d62b1d;
+}
+
+/* ========== PRODUCTOS ========== */
+
+.ilumina-content,
+.cara-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ilumina-1 {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 260px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.labios-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.labios-content .ilumina-1 {
+  width: 250px;
+}
+
+.ojos-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ojos-content .ilumina-1 {
+  width: 250px; 
+}
+
+.product-txt h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #111;
+}
+
+.product-txt .precio {
+    color: #FF3C2A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ========== REDES SOCIALES ========== */
+
+.footer-redes {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5cd9fee;
+  margin-top: 40px;
+}
+
+.footer-redes .social-links a {
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.footer-redes .social-links a:hover {
+  transform: scale(1.1);
+}
+
+.footer-redes .footer-texto {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ========== IMÁGENES DE PRODUCTOS ========== */
+.ilumina-1 img,
+.cara-1 img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.seccion-titulo {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #111;
+}
+
+.seccion-titulo {
+    scroll-margin-top: 100px;
+}
+
+.registro-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.registro-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.registro-form h2 {
+    margin-bottom: 1rem;
+    color: #cc2b5e;
+}
+
+.registro-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.registro-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.registro-form .btn-1 {
+    width: 100%;
+    background-color: #cc2b5e;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registro-form .btn-1:hover {
+    background-color: #b02450;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+.menu .iconos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu .iconos li {
+    list-style: none;
+}
+
+input[type="checkbox"]#menu {
+  display: none;
+}
+
+#formulario-registro input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#formulario-registro button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f26a8d;
+    color: white;
+    cursor: pointer;
+}
+
+#formulario-registro button:hover {
+    background-color: #d95678;
+}
+
+.cerrar {
+    color: #cc2b5e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+.modal-imagen {
+  width: 200px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.precio-modal {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.tonos-modal {
+  text-align: center;
+}
+
+
+/* ======= CONTENIDO DEL MODAL ======= */
+
+/* Modal fondo */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+/* Mostrar modal */
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Contenedor del contenido */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Cerrar (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+/* Botón enviar */
+.btn-enviar {
+  width: 100%;
+  background: #f26588;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background: #e75a80;
+}
+
+/* Inputs y textarea */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Imagen del producto */
+.modal-imagen {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Precio del producto */
+.precio-modal {
+  font-size: 20px;
+  color: #d62b1d;
+  margin: 10px 0;
+}
+
+/* Tonos (colores circulares) */
+.tonos-modal span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Fondo oscuro semitransparente */
+.ventana {
+  display: none; /* Oculta la ventana por defecto */
+  position: fixed; /* Fija la ventana en la pantalla */
+  z-index: 1000; /* Que esté encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Scroll si es necesario */
+  background-color: rgba(0,0,0,0.5); /* Fondo negro transparente */
+}
+
+/* Contenido de la ventana */
+.ventana-contenido {
+  background-color: #fff;
+  margin: 8% auto; /* Centramos vertical y horizontal */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Botón cerrar (la "X") */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #f26a8d; /* Color rosado al pasar mouse */
+}
+
+/* Imagen del producto dentro de la ventana */
+.modal-imagen {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Precio destacado */
+.precio-modal {
+  font-weight: bold;
+  color: #f26a8d;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Tonos de color */
+.tonos-modal span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 5px 5px 0 0;
+}
